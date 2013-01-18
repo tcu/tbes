@@ -124,7 +124,7 @@
 		309C7FF6166E5070002B8A80 /* TAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TAppDelegate.mm; sourceTree = "<group>"; };
 		309C7FF8166E5070002B8A80 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		309C7FFA166E5070002B8A80 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		30A3910D16A098D70075E088 /* TBES.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = TBES.entitlements; path = TBES/TBES.entitlements; sourceTree = "<group>"; };
+		30A3910D16A098D70075E088 /* TBES.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TBES.entitlements; sourceTree = "<group>"; };
 		30CC041D169DFF3500A3FC33 /* ConnectionDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionDetails.xib; sourceTree = "<group>"; };
 		30CC0420169E000D00A3FC33 /* TConnectionDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TConnectionDetailsController.h; sourceTree = "<group>"; };
 		30CC0421169E000D00A3FC33 /* TConnectionDetailsController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TConnectionDetailsController.mm; sourceTree = "<group>"; };
@@ -215,7 +215,6 @@
 		309C7FD7166E5070002B8A80 = {
 			isa = PBXGroup;
 			children = (
-				30A3910D16A098D70075E088 /* TBES.entitlements */,
 				304A1D86166E54D20004D50B /* Resources */,
 				309C7FEC166E5070002B8A80 /* Classes */,
 				309C7FED166E5070002B8A80 /* Supporting Files */,
@@ -274,6 +273,7 @@
 		309C7FED166E5070002B8A80 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				30A3910D16A098D70075E088 /* TBES.entitlements */,
 				309C7FEE166E5070002B8A80 /* TBES-Info.plist */,
 				309C7FEF166E5070002B8A80 /* InfoPlist.strings */,
 				309C7FF2166E5070002B8A80 /* main.m */,
