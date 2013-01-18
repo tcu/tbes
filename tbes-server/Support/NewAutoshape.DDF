@@ -1,0 +1,49 @@
+.OPTION EXPLICIT
+.Set Cabinet=off
+.Set Compress=off
+.Set MaxDiskSize=CDROM
+.Set ReservePerCabinetSize=6144
+.Set DiskDirectoryTemplate=".."
+.Set CompressionType=MSZIP
+.Set CompressionLevel=7
+.Set CompressionMemory=21
+.Set CabinetNameTemplate="TBES APP.CAB"
+"Setup.Lst"
+"setup.exe"
+.Set Cabinet=on
+.Set Compress=on
+"TBES APP.exe"
+"msvbvm60.dll"
+"OLEAUT32.DLL"
+"OLEPRO32.DLL"
+"ASYCFILT.DLL"
+"STDOLE2.TLB"
+"COMCAT.DLL"
+"DAO350.DLL"
+"MSJET35.DLL"
+"MSJTER35.DLL"
+"MSJINT35.DLL"
+"vbajet32.dll"
+"expsrv.dll"
+"MSRD2X35.DLL"
+"MSREPL35.DLL"
+"MSVCRT40.DLL"
+"VB5DB.DLL"
+"MSWINSCK.OCX"
+"MSFLXGRD.OCX"
+"msexcl35.dll"
+"SETUP1.EXE"
+"VB6STKIT.DLL"
+"ST6UNST.EXE"
+"1.bmp"
+"2.bmp"
+"3.bmp"
+"4.bmp"
+"5.bmp"
+"6.bmp"
+"7.bmp"
+"Testoffice.xls"
+"Results_Summary.xls"
+"Session_Template.xls"
+"CurrentSchedule.txt"
+"PortNumber.txt"
