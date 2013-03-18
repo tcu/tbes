@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3003727D16F7649600000CE3 /* TBES.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3003727C16F7649600000CE3 /* TBES.strings */; };
 		304A1D8B166E552C0004D50B /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304A1D89166E552C0004D50B /* FirstViewController.xib */; };
 		304A1D8C166E552C0004D50B /* MenuNavigation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304A1D8A166E552C0004D50B /* MenuNavigation.xib */; };
 		304A1D9F166E55420004D50B /* 1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 304A1D8D166E55420004D50B /* 1.bmp */; };
@@ -64,6 +65,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3003727C16F7649600000CE3 /* TBES.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = TBES.strings; sourceTree = "<group>"; };
 		304A1D89166E552C0004D50B /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		304A1D8A166E552C0004D50B /* MenuNavigation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuNavigation.xib; sourceTree = "<group>"; };
 		304A1D8D166E55420004D50B /* 1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = 1.bmp; sourceTree = "<group>"; };
@@ -150,9 +152,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3003727B16F7647400000CE3 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				3003727C16F7649600000CE3 /* TBES.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
 		304A1D86166E54D20004D50B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3003727B16F7647400000CE3 /* Strings */,
 				304A1D88166E55150004D50B /* Assets */,
 				304A1D87166E54EB0004D50B /* InterfaceFiles */,
 			);
@@ -375,6 +386,7 @@
 				3078A315169F408C00A2F84C /* HelpLogo.png in Resources */,
 				3078A31B169F460100A2F84C /* Default-Landscape.png in Resources */,
 				3078A323169F573000A2F84C /* login.png in Resources */,
+				3003727D16F7649600000CE3 /* TBES.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,8 +449,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "3A7EB20C-05FF-4D22-A1D3-BF031CAB0E5B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3A7EB20C-05FF-4D22-A1D3-BF031CAB0E5B";
+				PROVISIONING_PROFILE = "51FA096D-2E28-45B7-A7D0-03085097F243";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "51FA096D-2E28-45B7-A7D0-03085097F243";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -494,8 +506,8 @@
 				INFOPLIST_FILE = "TBES/TBES-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "44476E70-01D3-4940-A7B6-FBEA3C7B9103";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "44476E70-01D3-4940-A7B6-FBEA3C7B9103";
+				PROVISIONING_PROFILE = "342EA568-47B8-4AB0-8373-D591B92A9F09";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "342EA568-47B8-4AB0-8373-D591B92A9F09";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

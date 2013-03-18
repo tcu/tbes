@@ -44,8 +44,20 @@ typedef enum{
     HelpSourceCode
 }HelpItem;
 
+@interface THelpController(){
+    UIFont* _textLabelFont;
+    UIFont* _descriptionLabelFont;
+}
+
+@end
+
 @implementation THelpController
 @synthesize introController, shortcutsController, shapingController, simultaneousController, successiveController, labServerController, sourceCodeController;
+
+-(void) awakeFromNib{
+    _textLabelFont = [UIFont fontWithName: @"Helvetica-Bold" size: 12];
+    _descriptionLabelFont = [UIFont fontWithName: @"Helvetica-Bold" size: 10];
+}
 
 -(void) viewWillAppear:(BOOL)animated{
     
@@ -100,6 +112,50 @@ typedef enum{
     }
 }
 
+-(float) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString* title = nil;
+    NSString* desc = nil;
+    if(indexPath.row == HelpItemIntro){
+        title = TString(@"TBES_HELP_INTRO_TITLE");
+        desc = TString(@"TBES_HELP_INTRO_DESC");
+    }
+    else if(indexPath.row == HelpItemShortcuts){
+        title = TString(@"TBES_HELP_SHORTCUTS_TITLE");
+        desc = TString(@"TBES_HELP_SHIRTCUTS_DESC");
+    }
+    else if(indexPath.row == HelpAutoShaping){
+        title = TString(@"TBES_HELP_AUTO_SHAPING_TITLE");
+        desc = TString(@"TBES_HELP_AUTO_SHAPING_DESC");
+    }
+    else if(indexPath.row == HelpSimultaneousDiscrimination){
+        title = TString(@"TBES_HELP_SIM_DISCRIM_TITLE");
+        desc = TString(@"TBES_HELP_SIM_DISCRIM_DESC");
+    }
+    else if(indexPath.row == HelpSuccessiveDiscrimination){
+        title = TString(@"TBES_HELP_SUC_DESCRIM_TITLE");
+        desc = TString(@"TBES_HELP_SUC_DESCRIM_DESC");
+    }
+    else if(indexPath.row == HelpServerSoftware){
+        title = TString(@"TBES_HELP_SERVER_TITLE");
+        desc = TString(@"TBES_HELP_SERVER_DESC");
+    }
+    else if(indexPath.row == HelpSourceCode){
+        title = TString(@"TBES_HELP_SOURCE_TITLE");
+        desc = TString(@"TBES_HELP_SOURCE_DESC");
+    }
+    
+    CGSize titleSize = [title sizeWithFont: _textLabelFont constrainedToSize:CGSizeMake(300, 500)];
+    CGSize descriptionSize = [desc sizeWithFont: _descriptionLabelFont constrainedToSize:CGSizeMake(300, 500)];
+    float height = titleSize.height + descriptionSize.height + 25;
+    
+//    if(height < 75 ){
+//        height = 75;
+//    }
+    
+    
+    return height;
+}
+
 -(int) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 7;
 }
@@ -111,37 +167,43 @@ typedef enum{
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
     }
-    
+    NSString* title = nil;
+    NSString* desc = nil;
     if(indexPath.row == HelpItemIntro){
-        cell.textLabel.text = @"Introduction";
-        cell.detailTextLabel.text = @"An overview of the system and what it can be used for";
+        title = TString(@"TBES_HELP_INTRO_TITLE");
+        desc = TString(@"TBES_HELP_INTRO_DESC");
     }
     else if(indexPath.row == HelpItemShortcuts){
-        cell.textLabel.text = @"Shortcuts";
-        cell.detailTextLabel.text = @"Tap and Gestures techniques that make using the app easier";
+        title = TString(@"TBES_HELP_SHORTCUTS_TITLE");
+        desc = TString(@"TBES_HELP_SHIRTCUTS_DESC");
     }
     else if(indexPath.row == HelpAutoShaping){
-        cell.textLabel.text = @"Auto Shaping";
-        cell.detailTextLabel.text = @"Getting the desired behavior over successive trials.";
+        title = TString(@"TBES_HELP_AUTO_SHAPING_TITLE");
+        desc = TString(@"TBES_HELP_AUTO_SHAPING_DESC");
     }
     else if(indexPath.row == HelpSimultaneousDiscrimination){
-        cell.textLabel.text = @"Simultaneous Discrimination";
-        cell.detailTextLabel.text = @"Presenting two or more stimuli at the same time.";
+        title = TString(@"TBES_HELP_SIM_DISCRIM_TITLE");
+        desc = TString(@"TBES_HELP_SIM_DISCRIM_DESC");
     }
     else if(indexPath.row == HelpSuccessiveDiscrimination){
-        cell.textLabel.text = @"Successive Discrimination";
-        cell.detailTextLabel.text = @"Presenting two or more stimu one at a time.";
+        title = TString(@"TBES_HELP_SUC_DESCRIM_TITLE");
+        desc = TString(@"TBES_HELP_SUC_DESCRIM_DESC");
     }
     else if(indexPath.row == HelpServerSoftware){
-        cell.textLabel.text = @"Lab Server Software";
-        cell.detailTextLabel.text = @"Downloading and Installing the lab server software.";
+        title = TString(@"TBES_HELP_SERVER_TITLE");
+        desc = TString(@"TBES_HELP_SERVER_DESC");
     }
     else if(indexPath.row == HelpSourceCode){
-        cell.textLabel.text = @"Source Code";
-        cell.detailTextLabel.text = @"TBES is an open source application";
+        title = TString(@"TBES_HELP_SOURCE_TITLE");
+        desc = TString(@"TBES_HELP_SOURCE_DESC");
     }
     
-    
+    cell.textLabel.text = title;
+    cell.detailTextLabel.text = desc;
+    CGSize titleSize = [cell.textLabel.text sizeWithFont: _textLabelFont constrainedToSize:CGSizeMake(300, 500)];
+    CGSize descriptionSize = [cell.detailTextLabel.text sizeWithFont: _descriptionLabelFont constrainedToSize:CGSizeMake(300, 500)];
+    cell.textLabel.numberOfLines = ceil(titleSize.height / 15);
+    cell.detailTextLabel.numberOfLines = ceil(descriptionSize.height / 15);
     
     if(cell.backgroundView == nil){
         cell.backgroundView = [[UIView alloc] initWithFrame: cell.frame];

@@ -56,6 +56,7 @@
     IBOutlet UIView* toolTipView;
     IBOutlet UIButton* disconnectButton;
     IBOutlet UIButton* demoServerButton;
+    IBOutlet UIButton* connectButton;
 }
 
 @property(nonatomic, strong) NSTimer* connectionTimer;
@@ -218,6 +219,11 @@
     UIImage *buttonImagePressed = [UIImage imageNamed: @"blueButton.png"];
     UIImage *stretchableButtonImagePressed = [buttonImagePressed stretchableImageWithLeftCapWidth: 12 topCapHeight: 0];
     [demoServerButton setBackgroundImage: stretchableButtonImagePressed forState: UIControlStateNormal];
+    
+    [connectButton setTitle: @"Connect" forState: UIControlStateNormal];
+    [connectButton setTitle: @"Connect" forState: UIControlStateHighlighted];
+    [connectButton setTitleColor: [UIColor whiteColor]  forState: UIControlStateNormal];
+    [connectButton setBackgroundImage: stretchableButtonImagePressed forState: UIControlStateNormal];
     
     if([self.userDefaults objectForKey: TBES_LAST_CONNECTED_HOST] != nil){
         serverHostAddress.text = [self.userDefaults objectForKey: TBES_LAST_CONNECTED_HOST];

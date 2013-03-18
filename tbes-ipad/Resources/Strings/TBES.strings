@@ -1,0 +1,29 @@
+/* 
+  TBES.strings
+  TBES
+
+  Created by Danny Westfall on 3/18/13.
+  Copyright (c) 2013 TCU. All rights reserved.
+*/
+
+
+"TBES_HELP_INTRO_TITLE" = "Introduction";
+"TBES_HELP_INTRO_DESC" = "An overview of the system and what it can be used for";
+
+"TBES_HELP_SHORTCUTS_TITLE" = "Shortcuts";
+"TBES_HELP_SHIRTCUTS_DESC" = "Tap and Gesture techniques that make using the app easier";
+
+"TBES_HELP_AUTO_SHAPING_TITLE" = "Autoshaping";
+"TBES_HELP_AUTO_SHAPING_DESC" = "A mixed Pavlovian/instrumental procedure to establish baseline responding to the iPad.";
+
+"TBES_HELP_SIM_DISCRIM_TITLE" = "Simultaneous Discrimination";
+"TBES_HELP_SIM_DISCRIM_DESC" = "Repeated presentations of six stimuli - with two or more stimuli at the same time.";
+
+"TBES_HELP_SUC_DESCRIM_TITLE" = "Successive Discrimination";
+"TBES_HELP_SUC_DESCRIM_DESC" = "Repeated presentations of six stimuli - one at a time.";
+
+"TBES_HELP_SERVER_TITLE" = "Lab Server Software";
+"TBES_HELP_SERVER_DESC" = "Downloading and Installing the lab server software.";
+
+"TBES_HELP_SOURCE_TITLE" = "Source Code";
+"TBES_HELP_SOURCE_DESC" = "TBES is an open source application";

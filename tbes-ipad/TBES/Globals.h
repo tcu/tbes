@@ -36,3 +36,5 @@
 #else
 #define TLog(format, ...)
 #endif
+
+#define TString(key) [[NSBundle mainBundle] localizedStringForKey:key value:@"None" table: @"TBES"]
